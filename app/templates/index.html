@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image Filter</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+  </head>
+  <body
+    background="https://www.setaswall.com/wp-content/uploads/2017/03/Bright-Landscape-Wallpaper-1920x1080.jpg"
+  >
+    <div class="container" align="center">
+          <h1 class="text-center" style="font-weight : bold">
+            ----Image Filtering Application----
+          </h1>
+          <br>
+    </div>
+    <div align="center">
+      <form method="post" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="image" />
+        <label for="file-input"
+          ><i class="glyphicon glyphicon-open"></i>&nbsp;Choose an Image</label
+        >
+        <span>
+          <strong>Chosen Image:</strong>
+          <span id="file-name">None</span>
+        </span>
+        <script>
+          let inputFile = document.getElementById("file-input");
+          let fileNamefield = document.getElementById("file-name");
+          inputFile.addEventListener("change", function(event) {
+          let uploadedFileName = event.target.files[0].name;
+          fileNamefield.textContent = uploadedFileName;
+          });
+        </script>
+        <input type="submit" value="Upload Image" />
+        <input type="checkbox" name="filtered_image" id="download" value="15" />
+        <label for="download"> Download filtered image</label>
+        <br /><br />
+      </div>
+
+
+      <div class = "radioContainers" align="left">
+        <input type="radio" name="filter" value="1" checked />
+        <span class="circle">Black and White</span>
+        <br /><br />
+        <input type="radio" name="filter" value="2" />
+        <span class="circle">Blur</span>
+        <br /><br />
+        <input type="radio" name="filter" value="3" />
+        <span class="circle">Increase Contrast</span>
+        <br /><br />
+        <input type="radio" name="filter" value="4" />
+        <span class="circle">Flip</span>
+        <br /><br />
+        <input type="radio" name="filter" value="5" />
+        <span class="circle">Rotate by 90 degrees</span>
+        <br /><br />
+        <input type="radio" name="filter" value="6" />
+        <span class="circle">Thumbnail(360 * 360)</span>
+        <br /><br />
+        <input type="radio" name="filter" value="7" />
+        <span class="circle">Resize(720 * 720)</span>
+        <br /><br />
+        <input type="radio" name="filter" value="8" />
+        <span class="circle">Enhance Edges</span>
+        <br /><br />
+        <input type="radio" name="filter" value="9" /> 
+        <span class="circle">Emboss</span>
+        <br /><br />
+        <input type="radio" name="filter" value="10" />
+        <span class="circle">Contour</span>
+        <br /><br />
+        <input type="radio" name="filter" value="11" />
+        <span class="circle">Find Edges</span>
+        <br /><br />
+        <input type="radio" name="filter" value="12" />
+        <span class="circle">Smooth</span>
+        <br /><br />
+        <input type="radio" name="filter" value="13" />
+        <span class="circle">Sharpen</span>
+        <br /><br />
+        <input type="radio" name="filter" value="14" />
+        <span class="circle">Negative</span>
+      </div>
+        <br />
+        <div class = "warning">
+        <h1>Only 'JPG', 'JPEG' AND 'PNG' IMAGES CAN BE UPLOADED!!!</h1>
+        </div>
+      </form>
+  </body>
+</html>

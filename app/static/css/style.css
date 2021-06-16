@@ -1,0 +1,55 @@
+input#file-input {
+  display: none;
+}
+
+input#file-input + label {
+  background-color: #4d8cf2;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #9ec3ff;
+  border-radius: 9px;
+  margin-left: 20px;
+}
+
+input#file-input + label:hover {
+  background-color: #3b73ce;
+  border-color: #729fe7;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  border: 2px solid lightgreen;
+  border-radius: 9px;
+  margin-left: 20px;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: darkgreen;
+  border: 2px solid lightgreen;
+  color: white;
+  border-radius: 9px;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.warning {
+  padding-left: 500px;
+}
+
+.radioContainers {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 19px;
+  user-select: none;
+  padding-left: 850px;
+}
